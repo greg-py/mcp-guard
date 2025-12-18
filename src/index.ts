@@ -1,9 +1,9 @@
 /**
- * @fileoverview mcp-guard - Multi-layered security plugin for mcp-forge.
+ * @fileoverview mcp-forge-guard - Multi-layered security plugin for mcp-forge.
  * 
  * @packageDocumentation
  * 
- * mcp-guard provides defense-in-depth protection for MCP tool calls through:
+ * mcp-forge-guard provides defense-in-depth protection for MCP tool calls through:
  * - Layer 1 (Static): Namespace Firewall with pattern-based access control
  * - Layer 2 (Validation): Zod-based parameter scrubbing and injection prevention
  * - Layer 3 (Semantic): LLM-powered intent-alignment verification
@@ -11,7 +11,7 @@
  * 
  * @example
  * import { Forge } from 'mcp-forge';
- * import { mcpGuard } from 'mcp-guard';
+ * import { mcpGuard } from 'mcp-forge-guard';
  * 
  * const forge = new Forge({ name: 'secure-server', version: '1.0.0' });
  * 

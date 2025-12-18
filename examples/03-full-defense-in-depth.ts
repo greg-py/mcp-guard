@@ -1,7 +1,7 @@
 /**
  * @fileoverview Full Defense-in-Depth Example
  * 
- * This example demonstrates all 4 layers of mcp-guard working together:
+ * This example demonstrates all 4 layers of mcp-forge-guard working together:
  * - Layer 1: Namespace Firewall
  * - Layer 2: Parameter Validation
  * - Layer 3: Semantic Inspection (LLM)
@@ -12,7 +12,7 @@
 
 import { Forge } from 'mcp-forge';
 import { z } from 'zod';
-import { mcpGuard, formatApprovalRequest, type ToolCallContext } from 'mcp-guard';
+import { mcpGuard, formatApprovalRequest, type ToolCallContext } from 'mcp-forge-guard';
 
 const forge = new Forge({
     name: 'enterprise-secure-server',
@@ -70,7 +70,7 @@ async function approvalHandler(ctx: ToolCallContext): Promise<boolean> {
 }
 
 // ============================================================================
-// Configure mcp-guard with all 4 layers
+// Configure mcp-forge-guard with all 4 layers
 // ============================================================================
 forge.plugin(mcpGuard({
     // ─────────────────────────────────────────────────────────────────────────
@@ -173,7 +173,7 @@ forge.tool(
 // ============================================================================
 console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║  mcp-guard Example: Full Defense-in-Depth                       ║
+║  mcp-forge-guard Example: Full Defense-in-Depth                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  Layer 1 - Namespace Firewall:                                   ║

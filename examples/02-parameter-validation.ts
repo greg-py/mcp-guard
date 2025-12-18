@@ -9,7 +9,7 @@
 
 import { Forge } from 'mcp-forge';
 import { z } from 'zod';
-import { mcpGuard } from 'mcp-guard';
+import { mcpGuard } from 'mcp-forge-guard';
 
 const forge = new Forge({
     name: 'validated-api-server',
@@ -17,7 +17,7 @@ const forge = new Forge({
 });
 
 // ============================================================================
-// Add mcp-guard with parameter validation schemas
+// Add mcp-forge-guard with parameter validation schemas
 // ============================================================================
 forge.plugin(mcpGuard({
     // Allow all tools by default (focus on validation, not namespace)
@@ -103,7 +103,7 @@ forge.tool(
         description: 'Create a new user',
     },
     async (args) => {
-        // Args are already validated and sanitized by mcp-guard
+        // Args are already validated and sanitized by mcp-forge-guard
         console.log('[Tool] Creating user:', args);
         return { success: true, userId: 'usr_123' };
     }
@@ -157,7 +157,7 @@ forge.tool(
 // ============================================================================
 console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║  mcp-guard Example: Parameter Validation                        ║
+║  mcp-forge-guard Example: Parameter Validation                        ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  The guard will BLOCK these malicious inputs:                   ║
 ║                                                                  ║

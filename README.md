@@ -1,6 +1,6 @@
-# mcp-guard
+# mcp-forge-guard
 
-[![npm version](https://badge.fury.io/js/mcp-guard.svg)](https://www.npmjs.com/package/mcp-guard)
+[![npm version](https://badge.fury.io/js/mcp-forge-guard.svg)](https://www.npmjs.com/package/mcp-forge-guard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A multi-layered security middleware plugin for [mcp-forge](https://github.com/greg-py/mcp-forge) that provides defense-in-depth protection for MCP tool calls.
@@ -17,14 +17,14 @@ A multi-layered security middleware plugin for [mcp-forge](https://github.com/gr
 ## Installation
 
 ```bash
-npm install mcp-guard mcp-forge zod
+npm install mcp-forge-guard mcp-forge zod
 ```
 
 ## Quick Start
 
 ```typescript
 import { Forge } from 'mcp-forge';
-import { mcpGuard } from 'mcp-guard';
+import { mcpGuard } from 'mcp-forge-guard';
 import { z } from 'zod';
 
 const forge = new Forge({ name: 'secure-server', version: '1.0.0' });
@@ -71,7 +71,7 @@ forge.start();
 
 ## Guard Layers
 
-mcp-guard implements a multi-layered defense strategy:
+mcp-forge-guard implements a multi-layered defense strategy:
 
 ### Layer 1: Static Guard (Namespace Firewall)
 
@@ -172,7 +172,7 @@ import {
   createValidationGuard,
   pipe, 
   when 
-} from 'mcp-guard';
+} from 'mcp-forge-guard';
 
 // Create custom guards
 const namespaceGuard = createStaticGuard({
@@ -192,7 +192,7 @@ const customPipeline = pipe(namespaceGuard, validationGuard);
 Apply guards conditionally:
 
 ```typescript
-import { when, createApprovalGuard } from 'mcp-guard';
+import { when, createApprovalGuard } from 'mcp-forge-guard';
 
 const conditionalApproval = when(
   // Only require approval during business hours
@@ -212,7 +212,7 @@ const conditionalApproval = when(
 Simple shortcuts for common patterns:
 
 ```typescript
-import { createAllowList, createDenyList } from 'mcp-guard';
+import { createAllowList, createDenyList } from 'mcp-forge-guard';
 
 // Only allow specific tools
 const allowList = createAllowList(['safe:*', 'public:*']);
@@ -254,10 +254,10 @@ interface NamespaceRule {
 
 ## Error Handling
 
-mcp-guard throws specific errors that you can catch:
+mcp-forge-guard throws specific errors that you can catch:
 
 ```typescript
-import { GuardDeniedError, ApprovalTimeoutError } from 'mcp-guard';
+import { GuardDeniedError, ApprovalTimeoutError } from 'mcp-forge-guard';
 
 try {
   await forge.simulateToolCall('blocked:action', {});

@@ -1,5 +1,5 @@
 {
-  "name": "mcp-guard",
+  "name": "mcp-forge-guard",
   "version": "0.1.0",
   "description": "A multi-layered security middleware plugin for mcp-forge providing defense-in-depth protection for MCP tool calls",
   "type": "module",
@@ -40,12 +40,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/greg-py/mcp-guard.git"
+    "url": "https://github.com/greg-py/mcp-forge-guard.git"
   },
   "bugs": {
-    "url": "https://github.com/greg-py/mcp-guard/issues"
+    "url": "https://github.com/greg-py/mcp-forge-guard/issues"
   },
-  "homepage": "https://github.com/greg-py/mcp-guard#readme",
+  "homepage": "https://github.com/greg-py/mcp-forge-guard#readme",
   "engines": {
     "node": ">=18.0.0"
   },

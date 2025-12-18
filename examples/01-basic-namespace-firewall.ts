@@ -1,7 +1,7 @@
 /**
  * @fileoverview Basic Example - Namespace Firewall
  * 
- * This example demonstrates the simplest use case: using mcp-guard
+ * This example demonstrates the simplest use case: using mcp-forge-guard
  * to restrict tool access by namespace patterns.
  * 
  * Run: npx ts-node examples/01-basic-namespace-firewall.ts
@@ -9,7 +9,7 @@
 
 import { Forge } from 'mcp-forge';
 import { z } from 'zod';
-import { mcpGuard } from 'mcp-guard';
+import { mcpGuard } from 'mcp-forge-guard';
 
 // Create a new MCP server
 const forge = new Forge({
@@ -18,7 +18,7 @@ const forge = new Forge({
 });
 
 // ============================================================================
-// Add mcp-guard with namespace rules
+// Add mcp-forge-guard with namespace rules
 // ============================================================================
 forge.plugin(mcpGuard({
     namespaceRules: [
@@ -110,7 +110,7 @@ forge.tool(
 // ============================================================================
 console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║  mcp-guard Example: Basic Namespace Firewall                     ║
+║  mcp-forge-guard Example: Basic Namespace Firewall                     ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  Allowed tools:                                                  ║
 ║    - fs:readFile    (matches 'fs:read*')                         ║

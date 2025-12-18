@@ -7,7 +7,7 @@
  * 
  * @example
  * import { Forge } from 'mcp-forge';
- * import { mcpGuard } from 'mcp-guard';
+ * import { mcpGuard } from 'mcp-forge-guard';
  * 
  * const forge = new Forge({ name: 'my-server', version: '1.0.0' });
  * 
@@ -175,7 +175,7 @@ export class McpGuard {
             };
 
             if (verbose) {
-                console.log(`[mcp-guard] Evaluating tool call: ${ctx.name}`);
+                console.log(`[mcp-forge-guard] Evaluating tool call: ${ctx.name}`);
             }
 
             // Run through guard pipeline
@@ -183,7 +183,7 @@ export class McpGuard {
 
             if (!result.allowed) {
                 if (verbose) {
-                    console.log(`[mcp-guard] Denied: ${result.reason}`);
+                    console.log(`[mcp-forge-guard] Denied: ${result.reason}`);
                 }
                 throw new GuardDeniedError('GuardPipeline', ctx.name, result.reason ?? 'Access denied');
             }
@@ -195,7 +195,7 @@ export class McpGuard {
             }
 
             if (verbose) {
-                console.log(`[mcp-guard] Allowed: ${ctx.name}`);
+                console.log(`[mcp-forge-guard] Allowed: ${ctx.name}`);
             }
 
             // Proceed to the actual tool execution
@@ -206,14 +206,14 @@ export class McpGuard {
 
 /**
  * Factory function to create a McpGuard plugin.
- * This is the recommended way to integrate mcp-guard with mcp-forge.
+ * This is the recommended way to integrate mcp-forge-guard with mcp-forge.
  * 
  * @param config - Guard configuration
  * @returns ForgePlugin function to pass to forge.plugin()
  * 
  * @example
  * import { Forge } from 'mcp-forge';
- * import { mcpGuard } from 'mcp-guard';
+ * import { mcpGuard } from 'mcp-forge-guard';
  * 
  * const forge = new Forge({ name: 'my-server', version: '1.0.0' });
  * 

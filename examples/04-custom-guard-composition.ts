@@ -25,7 +25,7 @@ import {
     type Guard,
     type ToolCallContext,
     type GuardResult,
-} from 'mcp-guard';
+} from 'mcp-forge-guard';
 
 const forge = new Forge({
     name: 'custom-guard-server',
@@ -260,7 +260,7 @@ forge.tool(
 // ============================================================================
 console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║  mcp-guard Example: Custom Guard Composition                    ║
+║  mcp-forge-guard Example: Custom Guard Composition                    ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  This example shows how to:                                      ║

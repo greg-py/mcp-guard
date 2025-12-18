@@ -1,5 +1,5 @@
 /**
- * @fileoverview Zod schemas for type-safe mcp-guard configuration.
+ * @fileoverview Zod schemas for type-safe mcp-forge-guard configuration.
  * 
  * These schemas provide runtime validation and type inference for
  * guard configuration, ensuring correct usage at both compile and runtime.

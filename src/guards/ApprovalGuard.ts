@@ -212,7 +212,7 @@ export function createConsoleApprovalHandler(): ApprovalHandler {
 
         // In a real implementation, this would wait for user input
         // For now, we'll simulate auto-denial for safety
-        console.log('[mcp-guard] Console approval handler - auto-denying for safety');
+        console.log('[mcp-forge-guard] Console approval handler - auto-denying for safety');
         return false;
     };
 }

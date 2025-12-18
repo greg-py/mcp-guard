@@ -1,13 +1,13 @@
-# Contributing to mcp-guard
+# Contributing to mcp-forge-guard
 
-Thank you for your interest in contributing to mcp-guard! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to mcp-forge-guard! This document provides guidelines and instructions for contributing.
 
 ## Development Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/greg-py/mcp-guard.git
-   cd mcp-guard
+   git clone https://github.com/greg-py/mcp-forge-guard.git
+   cd mcp-forge-guard
    ```
 
 2. **Install dependencies**
@@ -97,7 +97,7 @@ Examples:
 
 When reporting bugs, please include:
 
-1. **Version** of mcp-guard you're using
+1. **Version** of mcp-forge-guard you're using
 2. **Node.js version**
 3. **Steps to reproduce** the issue
 4. **Expected behavior** vs **actual behavior**
@@ -116,4 +116,4 @@ If you discover a security vulnerability, please **do not** open a public issue.
 
 ## License
 
-By contributing to mcp-guard, you agree that your contributions will be licensed under the MIT License.
+By contributing to mcp-forge-guard, you agree that your contributions will be licensed under the MIT License.

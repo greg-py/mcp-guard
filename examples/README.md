@@ -1,6 +1,6 @@
-# mcp-guard Examples
+# mcp-forge-guard Examples
 
-This directory contains comprehensive examples demonstrating mcp-guard usage with mcp-forge.
+This directory contains comprehensive examples demonstrating mcp-forge-guard usage with mcp-forge.
 
 ## Running Examples
 

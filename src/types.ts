@@ -1,5 +1,5 @@
 /**
- * @fileoverview Core type definitions for mcp-guard security plugin.
+ * @fileoverview Core type definitions for mcp-forge-guard security plugin.
  * 
  * This module defines the fundamental types used throughout the guard system,
  * including tool context, guard results, and provider interfaces.
@@ -102,7 +102,7 @@ export interface ToolSecurityConfig {
 }
 
 /**
- * Main configuration for the mcp-guard plugin.
+ * Main configuration for the mcp-forge-guard plugin.
  */
 export interface GuardConfig {
     /** 
@@ -176,7 +176,7 @@ export class GuardDeniedError extends Error {
     public readonly reason: string;
 
     constructor(guardName: string, toolName: string, reason: string) {
-        super(`[mcp-guard] ${guardName} denied tool "${toolName}": ${reason}`);
+        super(`[mcp-forge-guard] ${guardName} denied tool "${toolName}": ${reason}`);
         this.name = 'GuardDeniedError';
         this.guardName = guardName;
         this.toolName = toolName;
@@ -192,7 +192,7 @@ export class ApprovalTimeoutError extends Error {
     public readonly timeoutMs: number;
 
     constructor(toolName: string, timeoutMs: number) {
-        super(`[mcp-guard] Approval timed out for tool "${toolName}" after ${timeoutMs}ms`);
+        super(`[mcp-forge-guard] Approval timed out for tool "${toolName}" after ${timeoutMs}ms`);
         this.name = 'ApprovalTimeoutError';
         this.toolName = toolName;
         this.timeoutMs = timeoutMs;

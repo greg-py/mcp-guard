@@ -283,7 +283,7 @@ describe('McpGuard Plugin', () => {
             await forge.simulateToolCall('test:action', {});
 
             expect(consoleSpy).toHaveBeenCalledWith(
-                expect.stringContaining('[mcp-guard]')
+                expect.stringContaining('[mcp-forge-guard]')
             );
 
             consoleSpy.mockRestore();
