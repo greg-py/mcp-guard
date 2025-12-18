@@ -1,0 +1,64 @@
+{
+  "name": "mcp-guard",
+  "version": "0.1.0",
+  "description": "A multi-layered security middleware plugin for mcp-forge providing defense-in-depth protection for MCP tool calls",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-forge",
+    "security",
+    "middleware",
+    "plugin",
+    "firewall",
+    "validation",
+    "llm",
+    "ai-safety"
+  ],
+  "author": "Greg King",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greg-py/mcp-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greg-py/mcp-guard/issues"
+  },
+  "homepage": "https://github.com/greg-py/mcp-guard#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.25.0"
+  },
+  "peerDependencies": {
+    "mcp-forge": ">=0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "mcp-forge": "^0.2.3",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
